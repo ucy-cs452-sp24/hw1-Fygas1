@@ -3,6 +3,7 @@
 In this assignment, I used a two-node (c220g5) cluster within the University of Wisconsin's CloudLab. I measured latency, bandwidth, and capacity to understand the performance characteristics of this setup.
 
 ## Graph
+![Alt text](graph.png)
 
 ## Comments
 **Latency:** Measured in microseconds (us), the graph shows that local DRAM has the lowest latency (0.096), indicating that it is the fastest in terms of access time. This is expected as DRAM is typically much faster than disk storage. The latency increases for local disk (238.6) and further increases for remote DRAM (55.096) and remote disk (293.6), because of added network latency (55 us).
