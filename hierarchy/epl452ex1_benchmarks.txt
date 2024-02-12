@@ -1,0 +1,56 @@
+Latency local DRAM (ns):                
+       0          95.5   147.0
+
+
+Bandwidth local DRAM (MB/sec):
+       0        48662.9 31008.1
+
+Capacity local DRAM (kB):
+MemTotal:       196670456 kB
+
+======================================
+
+Latency local disk (us):
+Minimum Latency: 206.6 microseconds (us)
+Average Latency: 238.6 microseconds (us)
+Maximum Latency: 256.3 microseconds (us)
+Mean Deviation: 16.1 microseconds (us)
+
+Bandwidth local disk:
+Run status group 0 (all jobs):
+   READ: bw=269MiB/s (282MB/s), 269MiB/s-269MiB/s (282MB/s-282MB/s), io=1024MiB (1074MB), run=3806-3806msec
+
+Capacity local disk:
+device size with M = 1000*1000:      480103 MBytes (480 GB)
+
+======================================
+
+Network latency:
+50 packets transmitted, 50 received, 0% packet loss, time 50156ms
+rtt min/avg/max/mdev = 0.047/0.055/0.218/0.023 ms
+
+Bandwidth:
+apelop01@node1:~$ iperf -c node0 -e -i 1 -u -b 4000m
+------------------------------------------------------------
+Client connecting to node0, UDP port 5001 with pid 12584 (1 flows)
+TOS set to 0x0 (Nagle on)
+Sending 1470 byte datagrams, IPG target: 2.94 us (kalman adjust)
+UDP buffer size:  208 KByte (default)
+------------------------------------------------------------
+[  1] local 10.10.1.2%enp94s0f0 port 45626 connected with 10.10.1.1 port 5001 (sock=3) on 2024-02-11 15:33:36 (CST)
+[ ID] Interval            Transfer     Bandwidth      Write/Err  PPS
+[  1] 0.0000-1.0000 sec   365 MBytes  3.06 Gbits/sec  0/0   260470 pps
+[  1] 1.0000-2.0000 sec   373 MBytes  3.13 Gbits/sec  0/0   265981 pps
+[  1] 2.0000-3.0000 sec   373 MBytes  3.13 Gbits/sec  0/0   266361 pps
+[  1] 3.0000-4.0000 sec   373 MBytes  3.13 Gbits/sec  0/0   266151 pps
+[  1] 4.0000-5.0000 sec   373 MBytes  3.13 Gbits/sec  0/0   266333 pps
+[  1] 5.0000-6.0000 sec   378 MBytes  3.17 Gbits/sec  0/0   269733 pps
+[  1] 6.0000-7.0000 sec   379 MBytes  3.18 Gbits/sec  0/0   270187 pps
+[  1] 7.0000-8.0000 sec   379 MBytes  3.18 Gbits/sec  0/0   270125 pps
+[  1] 8.0000-9.0000 sec   379 MBytes  3.18 Gbits/sec  0/0   270081 pps
+[  1] 9.0000-10.0000 sec   378 MBytes  3.17 Gbits/sec  0/0   269823 pps
+[  1] 0.0000-10.0000 sec  3.66 GBytes  3.15 Gbits/sec  0/0   267524 pps
+[  1] Sent 2675249 datagrams
+[  1] Server Report:
+[ ID] Interval       Transfer     Bandwidth        Jitter   Lost/Total Datagrams
+[  1] 0.0000-10.0000 sec  3.59 GBytes  3.09 Gbits/sec   0.006 ms 50059/2675248 (1.9%)
